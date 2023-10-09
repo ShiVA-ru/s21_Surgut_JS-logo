@@ -1,0 +1,26 @@
+.logo {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  animation: logo-rotate 4s ease-in-out 0s infinite alternate;
+}
+
+.logo__one,
+.logo__two {
+  animation: logo-scale 4s ease-in-out 0s infinite alternate;
+}
+
+@keyframes logo-rotate {
+  from {
+    rotate: 0;
+  }
+  to {
+    rotate: 180deg;
+  }
+}
+
+@keyframes logo-scale {
+  to {
+    transform: scaleX(-1);
+  }
+}
