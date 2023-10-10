@@ -2,25 +2,46 @@
   display: flex;
   width: 300px;
   height: 300px;
-  animation: logo-rotate 4s ease-in-out 0s infinite alternate;
+  animation: logo-rotate 4s ease-in-out infinite 0s alternate;
 }
 
 .logo__one,
 .logo__two {
-  animation: logo-scale 4s ease-in-out 0s infinite alternate;
+  animation: logo-scale-steps 4s ease-in-out infinite 0s alternate;
 }
 
 @keyframes logo-rotate {
-  from {
-    rotate: 0;
+  0% {
+    rotate: 0deg;
   }
-  to {
+  25% {
+    /* rorate: 0deg; */
+  }
+  50% {
+    rotate: 0deg;
+  }
+  75% {
+    /* rotate: 0deg; */
+  }
+  100% {
     rotate: 180deg;
   }
 }
 
-@keyframes logo-scale {
-  to {
+@keyframes logo-scale-steps {
+  0% {
+      /* transform: scaleX(-1); */
+      transform: none;
+    }
+  25% {
+    transform: scaleX(-1);
+  }
+  50% {
+    transform: none;
+  }
+  75% {
+    }
+  100% {
     transform: scaleX(-1);
   }
 }
